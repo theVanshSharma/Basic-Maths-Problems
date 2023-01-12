@@ -1,0 +1,20 @@
+Given two numbers A and B. The task is to find out their LCM and GCD.
+
+long long gcd(int a,int b){
+        while(a!=b){
+            if(a>b)  a=a-b;
+            else b=b-a;
+        }
+        return a;
+    }
+    
+    // since lcm*gcd = A*B
+    // thus lcm = (A*B)/gcd
+    
+    vector<long long> lcmAndGcd(long long A , long long B) {
+        // code here
+        vector<long long>v ;
+        v.push_back(A*B/gcd(A,B));
+        v.push_back(gcd(A,B));
+        return v;
+    }
