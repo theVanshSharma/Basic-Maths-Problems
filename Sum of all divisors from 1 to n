@@ -1,0 +1,46 @@
+Given a positive integer N., The task is to find the value of    \sum_{i=1}^{i=n} F(i) (summation of F(i) from i=1 to n)  where function F(i) for the number i be defined
+as the sum of all divisors of ‘i‘.
+
+long long sumOfDivisors(int N)
+    {
+        // Write Your Code here
+         long long sum = 0;
+
+        int n = N;
+
+        for(int i = 1; i <= n; i++){
+
+            int div= n / i;
+
+            sum += div * i;
+
+            
+
+        }
+
+        return sum;
+    }
+    // below method could be better
+    
+    // long long sumOfDivisors(int N)
+    // {
+    //     // Write Your Code here
+    //      int sum = 0;
+ 
+    // for(int i = 1; i <= N; ++i)
+    // {
+         
+    //     // Find all divisors of i and add them
+    //     for(int j = 1; j * j <= i; ++j)
+    //     {
+    //         if (i % j == 0)
+    //         {
+    //             if (i / j == j)
+    //                 sum += j;
+    //             else
+    //                 sum += j + i / j;
+    //         }
+    //     }
+    // }
+    // return sum;
+    // }
