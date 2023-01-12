@@ -1,0 +1,19 @@
+Given an integer, check whether it is a palindrome or not.
+
+string is_palindrome(int n)
+		{
+		    // Code here.
+		    int y=n;
+		    int x=0;
+		    while(y!=0){
+		        int r;
+		        r=y%10;
+		        x= (x*10)+r;
+		        y/=10;
+		    }
+		  //  cout<<x<<endl;  -->  just to check reverse of the number
+		    if(x==n){
+		        cout<<"Yes";
+		    }
+		    else cout<<"No";
+		}
