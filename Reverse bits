@@ -1,0 +1,29 @@
+Given a 32 bit number X, reverse its binary form and print the answer in decimal.
+
+
+
+long long reversedBits(long long X) {
+        // code here
+          long long arr[32] = {0}; //initialized with zero
+
+        long long num = X;
+
+        for(int i=0; num>0; i++){
+
+            arr[i] = (num%2) ;
+
+            num /=2;
+
+        }
+        
+        // the array will already have the reverse order of the binary for of the input number
+        // ex:- binary of 1 will be 000....0001 but with above for loop, array will start with 10000...00 itself
+
+        for(int i=0; i<32; i++){
+
+            num += arr[i] * (pow(2,31-i));
+
+        }
+
+        return num;
+    }
