@@ -1,0 +1,15 @@
+For a given 3 digit number, find whether it is armstrong number or not. 
+
+string armstrongNumber(int n){
+        // code here
+        int y=n;
+        int x, sum=0;
+        while(y!=0){
+            int r;
+            r= y%10;
+            sum= sum + pow(r,3);
+            y=y/10;
+        }
+        if(sum==n) cout<<"Yes";
+        else cout<<"No";
+    }
